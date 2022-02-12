@@ -53,7 +53,7 @@ RUN ./configure \
 
 RUN adduser -D inspircd
 
-RUN make && make Install
+RUN make && make install
 
 RUN apk del --purge .build-dependencies 
 
