@@ -1,0 +1,17 @@
+# ==============================================================================
+# Start the inspircd service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+# shellcheck shell=bash
+
+echo "Starting InspIRCd..."
+
+## Run inspircd
+inspircd start
+
+echo "Viewing InspIRCd..."
+
+exec inspircd status
+
+echo "Stopping InspIRCd..."
