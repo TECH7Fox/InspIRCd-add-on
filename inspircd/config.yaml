@@ -3,7 +3,7 @@ version: 0.1.1
 slug: inspircd
 description: IRC server
 url: https://github.com/TECH7Fox/inspircd-add-on
-#image: "ghcr.io/tech7fox/{arch}-addon-inspircd"
+image: "ghcr.io/tech7fox/{arch}-addon-inspircd"
 arch:
   - armhf
   - armv7
