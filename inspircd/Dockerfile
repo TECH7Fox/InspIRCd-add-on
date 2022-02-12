@@ -15,6 +15,8 @@ RUN apk add --no-cache --virtual .build-dependencies \
     argon2-dev \
     sqlite-dev
 
+# test
+
 # RUN apk add \
 #     argon2-dev \
 # 	libmaxminddb-dev \
