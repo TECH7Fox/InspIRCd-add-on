@@ -9,11 +9,11 @@
 bashio::log.info "Starting InspIRCd..."
 
 # Run inspircd
-exec inspircd start
+exec /inspircd/inspircd start
 
 bashio::log.info "Viewing InspIRCd..."
 
 # Get status
-exec inspircd status
+exec /inspircd/inspircd status
 
 bashio::log.info "Stopping InspIRCd..."
