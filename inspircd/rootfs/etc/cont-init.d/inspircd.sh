@@ -1,7 +1,8 @@
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Configures Asterisk
+# Configures InspIRCd
 # ==============================================================================
 
 # shellcheck shell=bash
 
-echo "Config here"
+bashio::log.info "Testing 123."

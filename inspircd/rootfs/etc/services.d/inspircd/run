@@ -1,17 +1,19 @@
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Start the inspircd service
+# Start the InspIRCd service
 # s6-overlay docs: https://github.com/just-containers/s6-overlay
 # ==============================================================================
 
 # shellcheck shell=bash
 
-echo "Starting InspIRCd..."
+bashio::log.info "Starting InspIRCd..."
 
-## Run inspircd
-inspircd start
+# Run inspircd
+exec inspircd start
 
-echo "Viewing InspIRCd..."
+bashio::log.info "Viewing InspIRCd..."
 
+# Get status
 exec inspircd status
 
-echo "Stopping InspIRCd..."
+bashio::log.info "Stopping InspIRCd..."
