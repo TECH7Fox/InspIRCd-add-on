@@ -1,6 +1,8 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:edge
 FROM $BUILD_FROM
 
+COPY rootfs /
+
 # Install InspIRCd
 RUN apk add --no-cache \
     perl
@@ -31,5 +33,3 @@ RUN ./configure \
 RUN make && make install
 
 RUN apk del --purge .build-dependencies && rm -r /inspircd-2.0.25
-
-COPY rootfs /
