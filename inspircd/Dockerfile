@@ -2,10 +2,12 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:edge
 FROM $BUILD_FROM
 
 # Install InspIRCd
+RUN apk add --no-cache \
+    perl
+
 RUN apk add --no-cache --virtual .build-dependencies \
     g++ \
     make \
-    perl \
     wget \
     mariadb-dev \
     libmaxminddb-dev \
