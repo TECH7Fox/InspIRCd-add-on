@@ -17,3 +17,5 @@ bashio::log.info "Viewing InspIRCd..."
 exec /inspircd/inspircd status
 
 bashio::log.info "Stopping InspIRCd..."
+
+sleep 9999
