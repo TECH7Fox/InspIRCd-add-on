@@ -36,22 +36,15 @@ RUN wget https://github.com/inspircd/inspircd/archive/v2.0.25.tar.gz \
 
 WORKDIR /inspircd-2.0.25
 
-RUN ./configure \
-    --prefix=/usr \
-    --binary-dir=/usr/bin \
-    --config-dir=/etc/inspircd \
-    --data-dir=/var/lib/inspircd/data \
-    --example-dir=/usr/share/inspircd/examples \
-    --log-dir=/var/log/inspircd \
-    --manual-dir=/usr/share/man/man1 \
-    --module-dir=/usr/lib/inspircd/modules \
-    --script-dir=/usr/lib/inspircd/scripts \
-    --socketengine=epoll \
-    --gid=inspircd \
-    --uid=inspircd \
-    --development
-
 RUN adduser -D inspircd
+
+RUN ./configure \
+    --prefix=/inspircd \
+    --config-dir=/etc/inspircd \
+    --enable-epoll \
+    --enable-openssl \
+    --gid=inspircd \
+    --uid=inspircd
 
 RUN make && make install
 
