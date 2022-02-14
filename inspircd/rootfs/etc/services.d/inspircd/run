@@ -9,13 +9,14 @@
 bashio::log.info "Starting InspIRCd..."
 
 # Run inspircd
-exec /inspircd/inspircd start
+/inspircd/inspircd start
 
 bashio::log.info "Viewing InspIRCd..."
 
 # Get status
-exec /inspircd/inspircd status
+/inspircd/inspircd status
 
 bashio::log.info "Stopping InspIRCd..."
 
-sleep 9999
+# Just for testing
+sleep infinity

@@ -3,6 +3,8 @@ FROM $BUILD_FROM
 
 COPY rootfs /
 
+RUN chown -R inspircd: /etc
+
 # Install InspIRCd
 RUN apk add --no-cache \
     perl
